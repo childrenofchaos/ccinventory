@@ -2,8 +2,9 @@
 <html>
 <head>
 <title>Main Inventory</title>
-	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 <style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 body {
 background-color: #e3cbc9;
 }
@@ -36,6 +37,7 @@ h1 {
 	border-radius: 10px;
 	border: 1px solid #c39b97;
 	text-align: center;
+	transition: .4s;
 }
 	
 	.inventory img {
@@ -77,8 +79,8 @@ item1.style.zIndex = "3";
 span.onclick = function() {
 item1.style.width = "180px";
 item1.style.height = "180px";
-item1.style.float = "right";
 item1.style.position = "relative";
+item1.style.float = "right";
 item1.style.zIndex = "1";
 }
 
@@ -87,8 +89,8 @@ window.onclick = function(event) {
   if (event.target == item1) {
     item1.style.width = "180px";
 item1.style.height = "180px";
-item1.style.float = "right";
 item1.style.position = "relative";
+item1.style.float = "right";
 item1.style.zIndex = "1";
   }
 }
