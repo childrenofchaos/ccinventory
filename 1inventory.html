@@ -2,34 +2,90 @@
 <html>
 <head>
 <title>Main Inventory</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 <style type="text/css">
 body {
 background-color: #e3cbc9;
 }
 
+h1 {
+	font-family: 'Muli', sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+   	font-family: Muli;
+   	text-transform: uppercase;
+   	color: #c39b97;
+	}
+	
 .inventory {
-margin: 20px;
-background-color: #f4e2dd;
-height: 500px;
-width: 660px;
-overflow: auto;
-padding: 25px;
+	margin: 20px;
+	background-color: #f4e2dd;
+	height: 500px;
+	width: 660px;
+	overflow: auto;
+	padding: 25px;
 }
 
 .inventoryitem {
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin: 10px;
-    height: 180px;
-    width: 180px;
-    float: left;
+    	background-color: #f4e2dd;
+    	padding: 10px;
+    	margin: 10px;
+    	height: 180px;
+    	width: 180px;
+    	float: left;
+	border-radius: 10px;
+	border: 1px solid #c39b97;
+	text-align: center;
 }
+	
+	.inventory img {
+	width: 150px;
+	height: 150px;
+	}
+	
+	.inventoryitem:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
 </style>
 </head>
 
 <body>
 <div class="inventory">
-<div class="inventoryitem">1tem</div>
+<div id="item1" class="inventoryitem"><span class="close">&times;</span><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>1tem</h1></div>
+	<script>
+var item = document.getElementById("item1");
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+item.onclick = function() {
+item.style.width = "640px";
+item.style.height = "480px";
+item.style.float = "none";
+item.style.position = "absolute";
+item.style.top = "0";
+item.style.left = "0";
+item.style.zIndex = "3";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+item.style.width = "180px";
+item.style.height = "180px";
+item.style.float = "right";
+item.style.position = "relative";
+item.style.zIndex = "1";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == item) {
+    item.style.width = "100px";
+  }
+}
+</script>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>2tem</h1></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>3tem</h1></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div>
 </div>
