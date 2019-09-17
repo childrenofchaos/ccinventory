@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main Inventory</title>
+<style type="text/css">
+body {
+background-color: #e3cbc9;
+}
+
+.inventory {
+margin: 20px;
+background-color: #f4e2dd;
+height: 500px;
+width: 660px;
+overflow: auto;
+padding: 25px;
+}
+
+.inventoryitem {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px;
+    height: 180px;
+    width: 180px;
+    float: left;
+}
+</style>
+</head>
+
+<body>
+<div class="inventory">
+<div class="inventoryitem">1tem</div>
+<div style="clear: both; height: 0px;">
+		&nbsp;</div>
+</div>
+</body>
+</html>
