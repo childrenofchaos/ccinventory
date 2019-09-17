@@ -19,7 +19,6 @@ h1 {
 	}
 	
 .inventory {
-	margin: 20px;
 	background-color: #f4e2dd;
 	height: 500px;
 	width: 660px;
@@ -48,8 +47,8 @@ h1 {
 </head>
 
 <body>
-<div class="inventory">
-<div id="item1" class="inventoryitem"><span class="close">&times;</span><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>1tem</h1></div>
+<div id="inventory" class="inventory">
+<div id="item1" class="inventoryitem"><div class="close">&times;</div><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>1tem</h1></div>
 <div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>2tem</h1></div>
 <div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>3tem</h1></div>
 <div style="clear: both; height: 0px;">
@@ -57,7 +56,8 @@ h1 {
 </div>
 		<script>
 var item1 = document.getElementById("item1");
-var span = document.getElementsByClassName("close")[0];
+var inventory = document.getElementById("inventory");
+var close = document.getElementById("close");
 
 // When the user clicks the button, open the modal 
 item1.onclick = function() {
@@ -65,13 +65,10 @@ item1.style.width = "640px";
 item1.style.height = "480px";
 item1.style.float = "none";
 item1.style.position = "absolute";
-item1.style.top = "0";
-item1.style.left = "0";
 item1.style.zIndex = "3";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+close.onclick = function() {
 item1.style.width = "180px";
 item1.style.height = "180px";
 item1.style.position = "relative";
@@ -81,7 +78,7 @@ item1.style.zIndex = "1";
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == item1) {
+  if (event.target == inventory) {
     item1.style.width = "180px";
 item1.style.height = "180px";
 item1.style.position = "relative";
