@@ -9,7 +9,7 @@ body {
 background-color: #e3cbc9;
 }
 
-h1 {
+h12 {
 	font-family: 'Muli', sans-serif;
 	font-size: 30px;
 	line-height: 30px;
@@ -43,14 +43,18 @@ h1 {
 	width: 150px;
 	height: 150px;
 	}
+	
+	.close {
+	cursor: pointer;
+}
 </style>
 </head>
 
 <body>
 <div id="inventory" class="inventory">
-<div id="item1" class="inventoryitem"><div class="close">&times;</div><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>1tem</h1></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>2tem</h1></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h1>3tem</h1></div>
+<div id="item1" class="inventoryitem"><div class="close">&times;</div><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>2tem</h12></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div>
 </div>
@@ -66,6 +70,7 @@ item1.style.height = "480px";
 item1.style.float = "none";
 item1.style.position = "absolute";
 item1.style.zIndex = "3";
+inventory.style.opacity = ".5";
 }
 
 close.onclick = function() {
