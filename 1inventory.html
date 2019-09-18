@@ -21,7 +21,7 @@ h12 {
 .inventory {
 	background-color: #f4e2dd;
 	height: 500px;
-	width: 660px;
+	width: 600px;
 	overflow: auto;
 	padding: 25px;
 }
@@ -30,8 +30,8 @@ h12 {
     	background-color: #f4e2dd;
     	padding: 10px;
     	margin: 10px;
-    	height: 180px;
-    	width: 180px;
+    	min-height: 180px;
+    	width: 158px;
     	float: left;
 	border-radius: 10px;
 	border: 1px solid #c39b97;
@@ -40,18 +40,19 @@ h12 {
 }
 	
 	.inventory img {
-	width: 150px;
-	height: 150px;
+	width: 158px;
+	width: 158px;
 	}
 	
-	#close {
+	.close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-#close:hover,#close:focus {
+.close:hover,
+.close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -61,35 +62,16 @@ h12 {
 </head>
 
 <body>
-<div id="inventory" class="inventory" onclick="closeItem()">
-<div id="item1" class="inventoryitem" onclick="openItem()"><div id="close" onclick="closeItem()">&times;</div><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>2tem</h12></div>
+<div id="inventory" class="inventory">
+<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>dies ist ein etwas längerer titel für 2tem questionmark</h12></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
+<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
+<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>dies ist ein etwas längerer titel für 2tem questionmark</h12></div>
 <div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div>
 </div>
-		<script>
-var item1 = document.getElementById("item1");
-var inventory = document.getElementById("inventory");
-var span = document.getElementsById("close");
 
-// When the user clicks the button, open the modal 
-function openItem() {
-item1.style.width = "240px";
-item1.style.height = "480px";
-item1.style.float = "none";
-item1.style.position = "absolute";
-item1.style.zIndex = "3";
-}
-
-function closeItem() { {
-item1.style.width = "180px";
-item1.style.height = "180px";
-item1.style.position = "relative";
-item1.style.float = "left";
-item1.style.zIndex = "1";
-}
-
-</script>
 </body>
 </html>
