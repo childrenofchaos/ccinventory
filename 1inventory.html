@@ -44,15 +44,14 @@ h12 {
 	height: 150px;
 	}
 	
-	.close {
+	#close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,#close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -62,8 +61,8 @@ h12 {
 </head>
 
 <body>
-<div id="inventory" class="inventory">
-<div id="item1" class="inventoryitem"><span class="close">&times;</span><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
+<div id="inventory" class="inventory" onclick="closeItem()">
+<div id="item1" class="inventoryitem" onclick="openItem()"><div id="close" onclick="closeItem()">&times;</div><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
 <div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>2tem</h12></div>
 <div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
 <div style="clear: both; height: 0px;">
@@ -72,19 +71,18 @@ h12 {
 		<script>
 var item1 = document.getElementById("item1");
 var inventory = document.getElementById("inventory");
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsById("close");
 
 // When the user clicks the button, open the modal 
-item1.onclick = function() {
+function openItem() {
 item1.style.width = "240px";
 item1.style.height = "480px";
 item1.style.float = "none";
 item1.style.position = "absolute";
 item1.style.zIndex = "3";
-inventory.style.opacity = ".5";
 }
 
-span.onclick = function() {
+function closeItem() { {
 item1.style.width = "180px";
 item1.style.height = "180px";
 item1.style.position = "relative";
