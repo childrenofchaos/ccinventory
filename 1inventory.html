@@ -58,20 +58,45 @@ h12 {
   cursor: pointer;
 }
 	
+	
+	.inventorypopup {
+	background-color: rgba(0,0,0,.7);
+	height: 500px;
+	width: 600px;
+	position: absolute;
+	}
+	
+	.itempopup {
+	color: #ffffff;
+	text-align: center;
+	}
 </style>
 </head>
 
 <body>
+	
+	<div id="inventorypopup">
+<div id="item1popup" class="itempopup"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
+
+	</div>	
 <div id="inventory" class="inventory">
-<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>dies ist ein etwas längerer titel für 2tem questionmark</h12></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
-<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>1tem</h12></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>dies ist ein etwas längerer titel für 2tem questionmark</h12></div>
-<div class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/gott2.jpg"><h12>3tem</h12></div>
+<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div>
 </div>
+<script>
+function itemPopup1() {
+document.getElementById('inventorypopup').style.display = 'block';
+document.getElementById('item1popup').style.display = 'block';
+document.getElementById('inventory').style.overflow = 'hidden';
+}
 
+function itemPopdown1() {
+document.getElementById('inventorypopup').style.display = 'none';
+document.getElementById('item1popup').style.display = 'none';
+document.getElementById('inventory').style.overflow = 'auto';
+}
+
+</script>
 </body>
 </html>
