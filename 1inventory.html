@@ -64,6 +64,7 @@ h12 {
 	height: 500px;
 	width: 600px;
 	position: absolute;
+		display: none;
 	}
 	
 	.itempopup {
@@ -76,13 +77,14 @@ h12 {
 <body>
 	
 	<div id="inventorypopup">
-<div id="item1popup" class="itempopup"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
+<div id="item1popup" class="itempopup"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12><button onclick="itemPopdown1()">Schließen</button></div>
 
 	</div>	
 <div id="inventory" class="inventory">
-<div id="item1" class="inventoryitem"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
+<div id="item1" class="inventoryitem" onclick="itemPopup1()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div>
+	<a href="/index.html">Alle Inventare durchsuchen</a>
 </div>
 <script>
 function itemPopup1() {
