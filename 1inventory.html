@@ -15,7 +15,7 @@ h12 {
 	line-height: 30px;
    	font-family: Muli;
    	text-transform: uppercase;
-   	color: #c39b97;
+   	color: #bf9074;
 	}
 	.inventorybg {
 		background-color: #1f0d06;
@@ -92,6 +92,22 @@ h12 {
 	color: #ffffff;
 	text-align: center;
 	}
+	
+	.itemdesc {
+	text-align: justify;
+		width: 400px; 
+		margin: 0 auto;
+	}
+	
+	button {
+	background-image: none!important;
+		boder: 1px solid #1f0d06;
+		color: #1f0d06;
+		padding: 10px;
+		font-size: 10px;
+		line-height: 10px;
+		background-color: #bf9074;
+	}
 
 	.item1pic {
 	width:400px;
@@ -133,7 +149,9 @@ animation-iteration-count: infinite;
 <body>
 	
 	<div id="inventorypopup">
-<div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12><button onclick="itemPopdown1()">Schließen</button></div>
+<div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12>
+	<div class="itemdes">
+	Die Beschreibung Des Items</div><button onclick="itemPopdown1()">Schließen</button></div>
 
 	</div>	
 	<div class="inventorybg">
