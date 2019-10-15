@@ -17,14 +17,34 @@ h12 {
    	text-transform: uppercase;
    	color: #c39b97;
 	}
-	
-.inventory {
-	background-color: #f4e2dd;
-	height: 500px;
-	width: 600px;
-	overflow: auto;
-	padding: 25px;
+	.inventorybg {
+		background-color: #1f0d06;
+	height: 490px;
+    width: 540px;
+    padding: 60px 70px;
+    background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/inventarbox.png);}	
+
+	.inventory {
+    height: 480px;
+    width: 540px;
+    overflow: auto;
 }
+	.allinventories {
+	height: 10px;
+	line-height: 10px;
+	font-size: 8px;
+	text-transform: uppercase;
+	font-family: Muli;
+	text-align: center;
+	}
+	
+	.allinventories a{
+	color: #80401a;
+	}
+	
+	.allinventories a:hover{
+	text-shadow: 0px 0px 2px #80401a;
+	}
 
 .inventoryitem {
     	background-color: #f4e2dd;
@@ -38,6 +58,7 @@ h12 {
 	text-align: center;
 	transition: .4s;
 }
+	
 	
 	.inventoryitem img {
 	width: 158px;
@@ -115,12 +136,13 @@ animation-iteration-count: infinite;
 <div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12><button onclick="itemPopdown1()">Schließen</button></div>
 
 	</div>	
+	<div class="inventorybg">
 <div id="inventory" class="inventory">
 	<div id="item1" class="inventoryitem" onclick="itemPopup1()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"><h12>1tem</h12></div>
 <div style="clear: both; height: 0px;">
-		&nbsp;</div>
-	<a href="https://childrenofchaos.github.io/ccinventory/index.html">Alle Inventare durchsuchen</a>
-</div>
+		&nbsp;</div></div>
+	<div class="allinventories"><a href="https://childrenofchaos.github.io/ccinventory/index.html">Alle Inventare durchsuchen</a>
+</div></div>
 <script>
 function itemPopup1() {
 document.getElementById('inventorypopup').style.display = 'block';
