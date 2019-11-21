@@ -3,18 +3,28 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  	@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+  h2 {
+    text-align: center;
+    font-size: 48px;
+    font-family: Muli;
+    text-transform: uppercase;
+    color: #c39b97;
+    line-height: 60px;
+    height: 60px;
+}
+  
 * {
   box-sizing: border-box;
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
+  border: 2px solid #e3cbc9;
+  background-color: #f4e2dd;
   margin-bottom: 12px;
 }
 
@@ -25,18 +35,20 @@
 }
 
 #myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
+  border: 2px solid #c39b97;
+  margin-top: -2px; /* Prevent double borders */
+  background-color: #e3cbc9;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
-  display: block
+  color: #c39b97;
+  display: block;
+  transition: .5s;
 }
 
 #myUL li a:hover:not(.header) {
-  background-color: #eee;
+  background-color: #c4a7a5;
+  color: #f4e2dd;
 }
 </style>
 </head>
