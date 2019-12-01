@@ -90,6 +90,7 @@ h12 {
 	}
 	
 	.itempopup {
+	display: none;
 	color: #000;
 	text-align: center;
 	}
@@ -98,7 +99,12 @@ h12 {
 	text-align: justify;
 		width: 400px; 
 		margin: 0 auto;
-	}
+    height: 80px;
+    margin-top: 10px;
+    overflow: auto;
+    font-size: 13px;
+    font-family: Tahoma, Arial, Verdana, sans-serif;
+}
 	
 	button {
 	background-image: none!important;
@@ -146,14 +152,15 @@ h12 {
 	
 	<div id="inventorypopup">
 <div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12>
-	<div class="itemdes">
+	<div class="itemdesc">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown1()">Schließen</button></div>
 		
 <div id="item2popup" class="itempopup"><div class="item2pic"></div><h12>2tem</h12>
-	<div class="itemdes">
+	<div class="itemdesc">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown2()">Schließen</button></div>
 
 	</div>	
+	
 	<div class="inventorybg">
 <div id="inventory" class="inventory">
 	<div id="item1" class="inventoryitem" onclick="itemPopup1()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos23.png"></div>
