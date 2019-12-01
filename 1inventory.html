@@ -118,7 +118,6 @@ h12 {
 	background-image: url(https://i.ibb.co/G79NrTm/xiphos1x.png);
 	background-size:400px;
 	}
-	
 	.item1pic:hover {
 	-webkit-animation-name: example;
   -webkit-animation-duration: 2s;
@@ -126,6 +125,19 @@ h12 {
   animation-name: item1pic;
   animation-duration: 2s;
 animation-iteration-count: infinite;
+	}
+	
+	.item2pic {
+	width:400px;
+	height: 400px;
+	margin: 0 auto;
+	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zapfel.png);
+	background-size:400px;
+	}
+	
+	
+	.item1pic:hover {
+		background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zapfelgif.gif);
 	}
 	
 	@keyframes item1pic {
@@ -154,11 +166,16 @@ animation-iteration-count: infinite;
 <div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12>
 	<div class="itemdes">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown1()">Schließen</button></div>
+		<div id="item2popup" class="itempopup"><div class="item2pic"></div><h12>2tem</h12>
+	<div class="itemdes">
+	Die Beschreibung Des Items</div><button onclick="itemPopdown2()">Schließen</button></div>
 
 	</div>	
 	<div class="inventorybg">
 <div id="inventory" class="inventory">
 	<div id="item1" class="inventoryitem" onclick="itemPopup1()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"></div>
+	<div id="inventory" class="inventory">
+	<div id="item2" class="inventoryitem" onclick="itemPopup2()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos1.png"></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div></div>
 	<div class="allinventories"><a href="https://childrenofchaos.github.io/ccinventory/index.html">Alle Inventare durchsuchen</a>
@@ -173,6 +190,18 @@ document.getElementById('inventory').style.overflow = 'hidden';
 function itemPopdown1() {
 document.getElementById('inventorypopup').style.display = 'none';
 document.getElementById('item1popup').style.display = 'none';
+document.getElementById('inventory').style.overflow = 'auto';
+}
+	
+function itemPopup2() {
+document.getElementById('inventorypopup').style.display = 'block';
+document.getElementById('item2popup').style.display = 'block';
+document.getElementById('inventory').style.overflow = 'hidden';
+}
+
+function itemPopdown2() {
+document.getElementById('inventorypopup').style.display = 'none';
+document.getElementById('item2popup').style.display = 'none';
 document.getElementById('inventory').style.overflow = 'auto';
 }
 
