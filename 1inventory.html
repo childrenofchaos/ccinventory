@@ -134,16 +134,29 @@ h12 {
 	width:400px;
 	height: 400px;
 	margin: 0 auto;
-	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfel.png);
+	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zwillingsdolche.png);
 	background-size:400px;
 	}
 	
 	
 	.item2pic:hover {
-	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfelgif.gif);
+	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/dolche.gif);
 	}
 	
 	.item3pic {
+	width:400px;
+	height: 400px;
+	margin: 0 auto;
+	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfel.png);
+	background-size:400px;
+	}
+	
+	
+	.item3pic:hover {
+	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfelgif.gif);
+	}
+	
+	.item4pic {
 	width:400px;
 	height: 400px;
 	margin: 0 auto;
@@ -152,7 +165,7 @@ h12 {
 	}
 	
 	
-	.item3pic:hover {
+	.item4pic:hover {
 	background-image: url(http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/ringligif.gif);
 	}
 	
@@ -164,25 +177,30 @@ h12 {
 <body>
 	
 	<div id="inventorypopup">
-<div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>1tem</h12>
+<div id="item1popup" class="itempopup"><div class="item1pic"></div><h12>Xiphos</h12>
 	<div class="itemdesc">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown1()">Schließen</button></div>
 		
-<div id="item2popup" class="itempopup"><div class="item2pic"></div><h12>2tem</h12>
+<div id="item2popup" class="itempopup"><div class="item2pic"></div><h12>Zwillingsdolche</h12>
 	<div class="itemdesc">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown2()">Schließen</button></div>
 		
-		<div id="item3popup" class="itempopup"><div class="item3pic"></div><h12>2tem</h12>
+		<div id="item3popup" class="itempopup"><div class="item3pic"></div><h12>Zankapfel</h12>
 	<div class="itemdesc">
 	Die Beschreibung Des Items</div><button onclick="itemPopdown3()">Schließen</button></div>
 
+		<div id="item4popup" class="itempopup"><div class="item4pic"></div><h12>Ring der COOLNESS</h12>
+	<div class="itemdesc">
+	Die Beschreibung Des Items</div><button onclick="itemPopdown4()">Schließen</button></div>
+		
 	</div>	
 	
 	<div class="inventorybg">
 <div id="inventory" class="inventory">
 	<div id="item1" class="inventoryitem" onclick="itemPopup1()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/xiphos23.png"></div>
-	<div id="item2" class="inventoryitem" onclick="itemPopup2()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfel.png"></div>
-	<div id="item3" class="inventoryitem" onclick="itemPopup3()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/ringli.png"></div>
+	<div id="item2" class="inventoryitem" onclick="itemPopup2()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zwillingsdolche.png"></div>
+	<div id="item3" class="inventoryitem" onclick="itemPopup3()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/zankapfel.png"></div>
+	<div id="item4" class="inventoryitem" onclick="itemPopup4()"><img src="http://static2.yooco.de/n/77/431690/u/7a/5783312/storage/ringli.png"></div>
 <div style="clear: both; height: 0px;">
 		&nbsp;</div></div>
 	<div class="allinventories"><a href="https://childrenofchaos.github.io/ccinventory/index.html">Alle Inventare durchsuchen</a>
@@ -221,6 +239,18 @@ document.getElementById('inventory').style.overflow = 'hidden';
 function itemPopdown3() {
 document.getElementById('inventorypopup').style.display = 'none';
 document.getElementById('item3popup').style.display = 'none';
+document.getElementById('inventory').style.overflow = 'auto';
+}
+	
+function itemPopup4() {
+document.getElementById('inventorypopup').style.display = 'block';
+document.getElementById('item4popup').style.display = 'block';
+document.getElementById('inventory').style.overflow = 'hidden';
+}
+
+function itemPopdown4() {
+document.getElementById('inventorypopup').style.display = 'none';
+document.getElementById('item4popup').style.display = 'none';
 document.getElementById('inventory').style.overflow = 'auto';
 }
 
